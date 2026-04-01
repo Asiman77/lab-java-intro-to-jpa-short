@@ -12,10 +12,11 @@ public class FlightBooking {
     private Integer bookingId;
 
 
-
+    @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
+    @ManyToOne
     @JoinColumn(name = "flight_id")
     private Flight flight;
 
