@@ -14,6 +14,11 @@ public class FlightBooking {
     @Column(name = "customer_id")
     private Integer customerId;
 
+    public FlightBooking(Integer bookingId, Integer customerId) {
+        this.bookingId = bookingId;
+        this.customerId = customerId;
+    }
+
     @Column(name = "flight_id")
     private Integer flightId;
 
