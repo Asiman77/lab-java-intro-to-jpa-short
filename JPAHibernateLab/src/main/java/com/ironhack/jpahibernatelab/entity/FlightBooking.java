@@ -4,7 +4,7 @@ package com.ironhack.jpahibernatelab.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "flightbookings")
+@Table(name = "flight_bookings")
 public class FlightBooking {
 
     @Id
@@ -14,11 +14,11 @@ public class FlightBooking {
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    private Customer customerId;
+    private Customer customer;
 
     @ManyToOne
     @JoinColumn(name = "flight_id")
-    private Flight flightId;
+    private Flight flight;
 
     public FlightBooking() {
 
@@ -32,19 +32,19 @@ public class FlightBooking {
         this.bookingId = bookingId;
     }
 
-    public Customer getCustomerId() {
-        return customerId;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCustomerId(Customer customerId) {
-        this.customerId = customerId;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
-    public Flight getFlightId() {
-        return flightId;
+    public Flight getFlight() {
+        return flight;
     }
 
-    public void setFlightId(Flight flightId) {
-        this.flightId = flightId;
+    public void setFlight(Flight flight) {
+        this.flight = flight;
     }
 }
