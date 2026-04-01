@@ -8,6 +8,7 @@ public class Flight {
 
     @Id
     @GeneratedValue
+    @Column(name = "flight_id")
     private Integer flightId;
 
     @Column(unique = true)

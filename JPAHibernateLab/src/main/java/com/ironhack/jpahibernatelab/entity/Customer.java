@@ -10,6 +10,7 @@ public class Customer {
 
     @Id
     @GeneratedValue
+    @Column(name = "flight_id")
     private Integer customerId;
 
     private String customerName;
